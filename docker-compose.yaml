@@ -1,0 +1,10 @@
+version: "3"
+services:
+    oracledocker:
+        image: epiclabs/docker-oracle-xe-11g
+        ports:
+            - "1521:1521"
+        volumes:
+            - "./oracle_data:/u01/app/oracle"
+        environment:
+            ORACLE_PASSWORD: oracle
